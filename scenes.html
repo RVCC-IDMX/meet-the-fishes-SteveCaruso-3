@@ -37,7 +37,7 @@
     var view = app.canvas;
 
     //Add view to the document
-    document.body.appendChild(app.view);
+    document.body.appendChild(view);
 
     /*
         Depending on the system or context, these can be called "scenes" "views" "pages" "panels" or all sorts of other things.
@@ -55,7 +55,7 @@
     let scene1 = new PIXI.Container();
 
     //Using our button object let's create a "next" button.
-    let nextButton = UI.Button(0,0,"Next >");
+    let nextButton = new UI.Button(0,0,"Next >");
     
     //Let's place it in the bottom right-hand corner of the screen (regardless of size)
     nextButton.x = app.view.width  - nextButton.width;
@@ -70,12 +70,11 @@
     //And place it into the scene
     scene1.addChild(scene1Text);
 
-
     //SCENE 2
     let scene2 = new PIXI.Container();
 
     //Using our button object let's create a "next" button.
-    let backButton = UI.Button(0,0,"< Back");
+    let backButton = new UI.Button(0,0,"< Back");
     
     //Let's place it in the bottom left-hand corner of the screen (regardless of size)
     backButton.x = 0;
