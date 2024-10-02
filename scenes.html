@@ -20,20 +20,21 @@
 </head>
 <body>
 
-<script>
+<script type="module">
 
     //
     // Basic setup
     //
 
     //The App
-    var app = new PIXI.Application({
+    var app = new PIXI.Application();
+    await app.init({
         width:640,
         height:480,
         backgroundColor: 0x000000
     });
     var stage = app.stage;
-    var view = app.view;
+    var view = app.canvas;
 
     //Add view to the document
     document.body.appendChild(app.view);
